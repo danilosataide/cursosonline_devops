@@ -14,4 +14,8 @@ public class Curso {
 	public int getPreco() {
 		return this.preco;
 	}
+	
+	public String getNome() {
+		return this.nome;
+	}
 }
