@@ -9,10 +9,10 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-class AlunoTests {
+class AlunoTest {
 	
 	@Test
-	public void alunoNaoTemTresCursos() {
+	public void testAlunoNaoTemTresCursos() {
 		Aluno aluno = new Aluno("Jorgi", 20, false);
 		
 		Curso curso1 = new Curso("Calculo I", 0, false);
@@ -29,7 +29,7 @@ class AlunoTests {
 	}
 	
 	@Test
-	public void alunoNaoTemMoedasSuficientes() {
+	public void testAlunoNaoTemMoedasSuficientes() {
 		Aluno aluno = new Aluno("Jorgi", 3, false);
 		
 		Curso curso = new Curso("Fenomenos Eletricos", 5, true);
@@ -38,7 +38,7 @@ class AlunoTests {
 	}
 	
 	@Test
-	public void alunoRecebePremiumCom12Cursos() {
+	public void testAlunoRecebePremiumCom12Cursos() {
 		Aluno aluno = new Aluno("Jonas", 15, false);
 		List<Curso> cursos = new ArrayList<>();
 		
@@ -52,7 +52,7 @@ class AlunoTests {
 	}
 
 	@Test
-	public void alunoRecebe3MoedasCom12Cursos() {
+	public void testAlunoRecebe3MoedasCom12Cursos() {
 		Aluno aluno = new Aluno("Joaquim", 0, false);
 		List<Curso> cursos = new ArrayList<>();;
 		
