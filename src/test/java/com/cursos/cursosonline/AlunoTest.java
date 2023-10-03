@@ -50,6 +50,20 @@ class AlunoTest {
 
 		assertEquals(true, aluno.verCursosETornarPremium());
 	}
+	
+	@Test
+	public void testAlunoRecebePremiumSem12Cursos() {
+		Aluno aluno = new Aluno("Jonas", 15, false);
+		List<Curso> cursos = new ArrayList<>();
+		
+		for (int i = 1; i <= 11; i++) {
+			Curso curso = new Curso("Curso " + i, 50, false);
+			cursos.add(curso);
+		}
+		aluno.setCursos(cursos);
+
+		assertEquals(false, aluno.verCursosETornarPremium());
+	}
 
 	@Test
 	public void testAlunoRecebe3MoedasCom12Cursos() {
